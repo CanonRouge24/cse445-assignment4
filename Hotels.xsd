@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="canonrouge24:cse445"
         elementFormDefault="unqualified"
-        attributeFormDefault="unqualified"
 >
   <element name="Hotels">
     <complexType>
