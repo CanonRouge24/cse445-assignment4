@@ -11,16 +11,12 @@
 
       <element name="Hotel"  minOccurs="1">
         <complexType>
-          <attribute name="Rating" type="xsd:float"/>
-
           <sequence>
             <element name="Name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
             <element name="Phone" type="xsd:string" minOccurs="1"/>
 
             <element name="Address" minOccurs="1" maxOccurs="1">
               <complexType>
-                <attribute name="NearestAirport" type="xsd:string" use="required"/>
-
                 <sequence>
                   <element name="Number" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
                   <element name="Street" type="xsd:string" minOccurs="1" maxOccurs="1"/>
@@ -28,10 +24,13 @@
                   <element name="State" type="xsd:string" minOccurs="1" maxOccurs="1"/>
                   <element name="Zip" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
                 </sequence>
+
+                <attribute name="NearestAirport" type="xsd:string" use="required"/>
               </complexType>
             </element>
           </sequence>
 
+          <attribute name="Rating" type="xsd:float"/>
         </complexType>
       </element>
 
