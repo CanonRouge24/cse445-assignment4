@@ -1,40 +1,39 @@
 <?xml version="1.0"?>
-<!-- After reading through w3schools tutorials on XSD -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="canonrouge24:cse445"
         elementFormDefault="unqualified"
         attributeFormDefault="unqualified"
 >
-
   <element name="Hotels">
     <complexType>
-
-      <element name="Hotel"  minOccurs="1">
-        <complexType>
-          <sequence>
-            <element name="Name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-            <element name="Phone" type="xsd:string" minOccurs="1"/>
-
-            <element name="Address" minOccurs="1" maxOccurs="1">
-              <complexType>
-                <sequence>
-                  <element name="Number" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
-                  <element name="Street" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-                  <element name="City" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-                  <element name="State" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-                  <element name="Zip" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
-                </sequence>
-
-                <attribute name="NearestAirport" type="xsd:string" use="required"/>
-              </complexType>
-            </element>
-          </sequence>
-
-          <attribute name="Rating" type="xsd:float"/>
-        </complexType>
-      </element>
-
+      <!-- Content model (sequence) must come first -->
+      <sequence>
+        <element name="Hotel" minOccurs="1">
+          <complexType>
+            <!-- Content model (sequence) comes before attributes -->
+            <sequence>
+              <element name="Name" type="string" minOccurs="1" maxOccurs="1"/>
+              <element name="Phone" type="string" minOccurs="1"/>
+              <element name="Address" minOccurs="1" maxOccurs="1">
+                <complexType>
+                  <!-- Content model (sequence) comes first here too -->
+                  <sequence>
+                    <element name="Number" type="integer" minOccurs="1" maxOccurs="1"/>
+                    <element name="Street" type="string" minOccurs="1" maxOccurs="1"/>
+                    <element name="City" type="string" minOccurs="1" maxOccurs="1"/>
+                    <element name="State" type="string" minOccurs="1" maxOccurs="1"/>
+                    <element name="Zip" type="integer" minOccurs="1" maxOccurs="1"/>
+                  </sequence>
+                  <!-- Attribute moved to AFTER the sequence -->
+                  <attribute name="NearestAirport" type="string" use="required"/>
+                </complexType>
+              </element>
+            </sequence>
+            <!-- Attribute moved to AFTER the sequence -->
+            <attribute name="Rating" type="float"/>
+          </complexType>
+        </element>
+      </sequence>
     </complexType>
   </element>
-
 </schema>
