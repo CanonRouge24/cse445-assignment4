@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- After reading through w3schools tutorials on XSD -->
-<schema xmlns="http://www.w3.org/2000/10/XMLSchema"
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="canonrouge24:cse445"
         elementFormDefault="unqualified"
         attributeFormDefault="unqualified"
