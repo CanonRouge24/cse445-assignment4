@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+
+<!-- Error 1: Root element is named Hotel rather than Hotels -->
+<Hotel xmlns="canonrouge24:cse445"
+        xmlns:xsi="http://www.w3.org/2001/XmlSchema-instance"
+        xsi:schemaLocation=""
+>
+  <Hotel Rating="4.2">
+    <Name>Westin</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E. 7th St.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!--
+    Gathered from www.google.com/travel/search?q=hotel&g2lb=4965990%2C72317059%2C72414906%2C72471280%2C72485658%2C72560029%2C72573224%2C72616120%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C72959983%2C73059275%2C73064764%2C73107089&hl=en-US&gl=us&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI6Q8QCxgLEgcI6Q8QCxgMGAEyAhAAKgkKBToDVVNEGgA&qs=CAE4BkIJEfHsiYZIW-tyQgkRJ_ksCbBwwLFCCRFyCpepKT9-sUgAWj0IATI5qgE2EAEqCSIFaG90ZWwoADIcEAEiGLv8DWy0GmcrQbW6pt4yK-nv9R63SKOHTzIJEAIiBWhvdGVs&ap=KigKEgmpTcsH-qFAQBEgeMBfPghcwBISCVQRrEcOwUBAESB4wL-q8FvAMABIAWgB&ictx=111&ved=0CAEQvekIahgKEwjY7uX02cqQAxUAAAAAHQAAAAAQqg0
+    The extra phone numbers are fake (should be quite obvious). I don't know where I would find alternative phone numbers from these hotels...
+  -->
+  <Hotel>
+    <Name>Sonesta Simply Suites Phoenix Tempe</Name>
+    <Phone>480-777-0440</Phone>
+    <Phone>480-777-0441</Phone>
+    <!-- Error 2: A required attribute (NearestAirport) is missing -->
+    <Address>
+      <Number>1335</Number>
+      <Street>W Baseline Rd.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85283</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Ramada by Wyndham Tempe/At Arizona Mills Mall</Name>
+    <Phone>480-400-9038</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>1701</Number>
+      <Street>W Baseline Rd.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85283</Zip.
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="3.9">
+    <Name>DoubleTree Suites by Hilton Hotel Phoenix</Name>
+    <!-- Error 3: A Phone element is missing on one of the hotels. -->
+    <Address NearestAirport="Sky Harbor">
+      <Number>320</Number>
+      <Street>N 44th St.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85008</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.5">
+    <Name>Omni Tempe Hotel at ASU</Name>
+    <Phone>602-794-8600</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>7</Number>
+      <Street>E University Dr.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    <!-- Error 4: An Address element has no closing tag. -->
+  </Hotel>
+
+  <Hotel>
+    <Name>Marriott Phoenix Resort Tempe at the Buttes</Name>
+    <Phone>602-225-9000</Phone>
+    <Phone>602-225-8000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>2000</Number>
+      <Street>Westcourt Way</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85282</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.4">
+    <Name>Tempe Mission Palms, a Destination by Hyatt Hotel</Name>
+    <!-- Error 5: Two names are provided for one of the hotels -->
+    <Name>Hyatt Mission Palms at Tempe</Name>
+    <Phone>480-894-1400</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>60</Number>
+      <Street>E 5th St.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Motel 6 Tempe, AZ - Broadway - ASU</Name>
+    <Phone>480-967-8696</Phone>
+    <Phone>480-966-4722</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>513</Number>
+      <Street>W Broadway Rd.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85282</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>La Quinta Inn by Wyndham Phoenix Sky Harbor Airport</Name>
+    <Phone>480-967-4465</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>911</Number>
+      <Street>S 48th St.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="3.8">
+    <Name>GreenTree Inn &amp; Suites Phoenix Sky Harbor</Name>
+    <Phone>602-688-5730</Phone>
+    <Phone>602-688-5731</Phone>
+    <Phone>602-688-5732</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>4234</Number>
+      <Street>S 48th St.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85040</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.6">
+    <Name>Tempe Oasis</Name>
+    <Phone>480-219-9837</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>1635</Number>
+      <Street>N Scottsdale Rd.</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85288</Zip>
+    </Address>
+  </Hotel> 
+</Hotels>
