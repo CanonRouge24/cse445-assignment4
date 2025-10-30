@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!-- After reading through w3schools tutorials on XSD -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="canonrouge24:cse445"
@@ -9,17 +10,17 @@
     <complexType>
 
       <element name="Hotel"  minOccurs="1">
-        <attribute name="Rating" type="xsd:float"/>
-
         <complexType>
+          <attribute name="Rating" type="xsd:float"/>
+
           <sequence>
             <element name="Name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
             <element name="Phone" type="xsd:string" minOccurs="1"/>
 
             <element name="Address" minOccurs="1" maxOccurs="1">
-              <attribute name="NearestAirport" type="xsd:string" use="required"/>
-
               <complexType>
+                <attribute name="NearestAirport" type="xsd:string" use="required"/>
+
                 <sequence>
                   <element name="Number" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
                   <element name="Street" type="xsd:string" minOccurs="1" maxOccurs="1"/>
@@ -29,8 +30,8 @@
                 </sequence>
               </complexType>
             </element>
-
           </sequence>
+
         </complexType>
       </element>
 
