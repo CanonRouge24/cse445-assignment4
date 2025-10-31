@@ -19,7 +19,7 @@
       <xs:element name="Address" type="AddressType" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
 
-    <xs:attribute name="Rating" type="float"/>
+    <xs:attribute name="Rating" type="xs:float"/>
   </xs:complexType>
 
   <xs:complexType name="AddressType">
