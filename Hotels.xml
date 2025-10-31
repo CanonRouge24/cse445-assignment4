@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 
-<Hotels xmlns="canonrouge24:cse445"
-        xmlns:xsi="http://www.w3.org/2001/XmlSchema-instance"
-        xsi:schemaLocation=""
+<Hotels xmlns:xsi="http://www.w3.org/2001/XmlSchema-instance"
+        xsi:schemaLocation="https://canonrouge24.github.io/cse445-assignment4/Hotels.xsd"
 >
   <Hotel Rating="4.2">
     <Name>Westin</Name>
