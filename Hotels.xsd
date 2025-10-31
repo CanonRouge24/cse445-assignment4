@@ -9,18 +9,18 @@
   <xs:complexType name="HotelsType">
     <xs:sequence>
       <xs:element name="Hotel" type="HotelType" minOccurs="1" maxOccurs="unbounded"/>
-    <xs:/sequence>
-  <xs:/complexType>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="HotelType">
     <xs:sequence>
       <xs:element name="Name" type="string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="Phone" type="string" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Address" type="AddressType" minOccurs="1" maxOccurs="1"/>
-    <xs:/sequence>
+    </xs:sequence>
 
     <xs:attribute name="Rating" type="float"/>
-  <xs:/complexType>
+  </xs:complexType>
 
   <xs:complexType name="AddressType">
     <xs:sequence>
@@ -29,9 +29,9 @@
       <xs:element name="City" type="string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="State" type="string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="Zip" type="integer" minOccurs="1" maxOccurs="1"/>
-    <xs:/sequence>
+    </xs:sequence>
 
     <xs:attribute name="NearestAirport" type="string" use="required"/>
-  <xs:/complexType>
+  </xs:complexType>
 
-<xs:/schema>
+</xs:schema>
