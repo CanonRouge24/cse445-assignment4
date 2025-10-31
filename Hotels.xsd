@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://canonrouge24.github.io/cse445-assignment4"
         elementFormDefault="unqualified" attributeFormDefault="unqualified"
 >
   <element name="Hotels" type="HotelsType"/>
