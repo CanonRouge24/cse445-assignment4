@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<Hotels xmlns:xsi="http://www.w3.org/2001/XmlSchema-instance"
+<Hotels xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XmlSchema-instance"
         xsi:schemaLocation="https://canonrouge24.github.io/cse445-assignment4/Hotels.xsd"
 >
   <Hotel Rating="4.2">
