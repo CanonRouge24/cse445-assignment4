@@ -1,37 +1,35 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        elementFormDefault="unqualified"
+        elementFormDefault="unqualified" attributeFormDefault="unqualified"
 >
-  <element name="Hotels">
-    <complexType>
-      <!-- Content model (sequence) must come first -->
-      <sequence>
-        <element name="Hotel" minOccurs="1">
-          <complexType>
-            <!-- Content model (sequence) comes before attributes -->
-            <sequence>
-              <element name="Name" type="string" minOccurs="1" maxOccurs="1"/>
-              <element name="Phone" type="string" minOccurs="1"/>
-              <element name="Address" minOccurs="1" maxOccurs="1">
-                <complexType>
-                  <!-- Content model (sequence) comes first here too -->
-                  <sequence>
-                    <element name="Number" type="integer" minOccurs="1" maxOccurs="1"/>
-                    <element name="Street" type="string" minOccurs="1" maxOccurs="1"/>
-                    <element name="City" type="string" minOccurs="1" maxOccurs="1"/>
-                    <element name="State" type="string" minOccurs="1" maxOccurs="1"/>
-                    <element name="Zip" type="integer" minOccurs="1" maxOccurs="1"/>
-                  </sequence>
-                  <!-- Attribute moved to AFTER the sequence -->
-                  <attribute name="NearestAirport" type="string" use="required"/>
-                </complexType>
-              </element>
-            </sequence>
-            <!-- Attribute moved to AFTER the sequence -->
-            <attribute name="Rating" type="float"/>
-          </complexType>
-        </element>
-      </sequence>
-    </complexType>
-  </element>
+  <element name"Hotels" type="HotelsType"/>
+
+  <complexType name="HotelsType">
+    <sequence>
+      <element name="Hotel" type="HotelType" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="HotelsType">
+    <sequence>
+      <element name="Name" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="Phone" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      <element name="Address" type="AddressType" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+
+    <attribute name="Rating" type="float"/>
+  </complexType>
+
+  <complexType name="AddressType">
+    <sequence>
+      <element name="Number" type="integer" minOccurs="1" maxOccurs="1"/>
+      <element name="Street" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="City" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="State" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="Zip" type="integer" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+
+    <attribute name="NearestAirport" type="string" use="required"/>
+  </complexType>
+
 </schema>
