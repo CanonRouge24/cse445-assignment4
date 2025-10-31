@@ -2,7 +2,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         elementFormDefault="unqualified" attributeFormDefault="unqualified"
 >
-  <element name"Hotels" type="HotelsType"/>
+  <element name="Hotels" type="HotelsType"/>
 
   <complexType name="HotelsType">
     <sequence>
