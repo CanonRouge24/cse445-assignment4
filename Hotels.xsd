@@ -10,7 +10,7 @@
     </sequence>
   </complexType>
 
-  <complexType name="HotelsType">
+  <complexType name="HotelType">
     <sequence>
       <element name="Name" type="string" minOccurs="1" maxOccurs="1"/>
       <element name="Phone" type="string" minOccurs="1" maxOccurs="unbounded"/>
