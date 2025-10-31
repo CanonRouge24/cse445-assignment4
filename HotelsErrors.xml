@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
 <!-- Error 1: Root element is named Hotel rather than Hotels -->
-<Hotel xmlns="canonrouge24:cse445"
+<Hotel xmlns="http://canonrouge24.github.io/cse445-assignment4/"
         xmlns:xsi="http://www.w3.org/2001/XmlSchema-instance"
-        xsi:schemaLocation=""
+        xsi:schemaLocation="http://canonrouge24.github.io/cse445-assignment4/Hotels.xsd"
 >
   <Hotel Rating="4.2">
     <Name>Westin</Name>
