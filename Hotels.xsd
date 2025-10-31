@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:c="https://canonrouge24.github.io/cse445-assignment4"
         targetNamespace="https://canonrouge24.github.io/cse445-assignment4"
         elementFormDefault="unqualified" attributeFormDefault="unqualified"
 >
-  <element name="Hotels" type="HotelsType"/>
+  <element name="c:Hotels" type="c:HotelsType"/>
 
-  <complexType name="HotelsType">
+  <complexType name="c:HotelsType">
     <sequence>
-      <element name="Hotel" type="HotelType" minOccurs="1" maxOccurs="unbounded"/>
+      <element name="c:Hotel" type="c:HotelType" minOccurs="1" maxOccurs="unbounded"/>
     </sequence>
   </complexType>
 
-  <complexType name="HotelType">
+  <complexType name="c:HotelType">
     <sequence>
-      <element name="Name" type="string" minOccurs="1" maxOccurs="1"/>
-      <element name="Phone" type="string" minOccurs="1" maxOccurs="unbounded"/>
-      <element name="Address" type="AddressType" minOccurs="1" maxOccurs="1"/>
+      <element name="c:Name" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="c:Phone" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      <element name="c:Address" type="AddressType" minOccurs="1" maxOccurs="1"/>
     </sequence>
 
-    <attribute name="Rating" type="float"/>
+    <attribute name="c:Rating" type="float"/>
   </complexType>
 
-  <complexType name="AddressType">
+  <complexType name="c:AddressType">
     <sequence>
-      <element name="Number" type="integer" minOccurs="1" maxOccurs="1"/>
-      <element name="Street" type="string" minOccurs="1" maxOccurs="1"/>
-      <element name="City" type="string" minOccurs="1" maxOccurs="1"/>
-      <element name="State" type="string" minOccurs="1" maxOccurs="1"/>
-      <element name="Zip" type="integer" minOccurs="1" maxOccurs="1"/>
+      <element name="c:Number" type="integer" minOccurs="1" maxOccurs="1"/>
+      <element name="c:Street" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="c:City" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="c:State" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="c:Zip" type="integer" minOccurs="1" maxOccurs="1"/>
     </sequence>
 
-    <attribute name="NearestAirport" type="string" use="required"/>
+    <attribute name="c:NearestAirport" type="string" use="required"/>
   </complexType>
 
 </schema>
